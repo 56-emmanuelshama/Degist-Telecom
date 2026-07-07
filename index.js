@@ -39,3 +39,30 @@
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappMessage =
+`Hello Degist International,
+
+I would like to make an enquiry.
+
+*Full Name:* ${name}
+*Phone:* ${phone}
+*Email:* ${email}
+*Sector of Interest:* ${service}
+
+*Message:*
+${message}`;
+
+    const whatsappURL = "https://wa.me/254712563484?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
+});
