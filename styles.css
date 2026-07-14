@@ -251,3 +251,136 @@
     height:52px;
     object-fit:contain;
 }
+.card{
+    width:100%;
+    padding:20px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    overflow:hidden;
+}
+
+.shama{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;              /* Space between images */
+    flex-wrap:nowrap;      /* Keep images on one line */
+}
+
+.shama img{
+   
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s ease;
+}
+
+.shama img:hover{
+    transform:scale(1.05);
+}
+.shama{
+    display:flex;
+    gap:10px;
+}
+
+.shama img{
+    width:calc(33.333% - 7px);
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+.card{
+    width:100%;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-content{
+    margin-bottom:20px;
+}
+
+.card-content h1{
+    font-size:28px;
+    color:#1C2226;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    font-size:16px;
+    line-height:1.7;
+    color:#555;
+}
+
+.sham{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+}
+
+.sham img{
+    width:calc(33.333% - 10px);
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.sham img:hover{
+    transform:scale(1.05);
+}
+/* Card */
+.card{
+    width:100%;
+    margin-top:20px;
+}
+
+/* Images container */
+.sham{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* Images */
+.sham img{
+    flex:1 1 calc(33.333% - 10px);
+    max-width:calc(33.333% - 10px);
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+}
+
+/* Tablets */
+@media (max-width: 992px){
+    .sham img{
+        flex:1 1 calc(50% - 10px);
+        max-width:calc(50% - 10px);
+        height:200px;
+    }
+}
+
+/* Phones */
+@media (max-width: 576px){
+    .sham{
+        gap:12px;
+    }
+
+    .sham img{
+        flex:1 1 100%;
+        max-width:100%;
+        height:220px;
+    }
+
+    .sector-card h3{
+        font-size:1.4rem;
+    }
+
+    .sector-card p{
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+}
